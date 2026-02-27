@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce un número: ");
+        int n = sc.nextInt();
+
+        if (n % 2 == 0) {
+            System.out.println("Es par");
+        } else {
+            System.out.println("Es impar");
+        }
+    }
+}
+
+
+mport java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Año: ");
+        int y = sc.nextInt();
+
+        if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) {
+            System.out.println("Es bisiesto");
+        } else {
+            System.out.println("No es bisiesto");
+        }
+    }
+}
+
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nombre: "); String nombre = sc.nextLine();
+        System.out.print("Edad: "); int edad = sc.nextInt();
+
+        if (edad >= 70) {
+            System.out.println(nombre + " tiene prioridad en la fila.");
+        } else {
+            System.out.println(nombre + " turno normal.");
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("N1: "); double n1 = sc.nextDouble();
+        System.out.print("N2: "); double n2 = sc.nextDouble();
+        System.out.print("N3: "); double n3 = sc.nextDouble();
+
+        if (n1 >= n2 && n1 >= n3) System.out.println("Mayor: " + n1);
+        else if (n2 >= n1 && n2 >= n3) System.out.println("Mayor: " + n2);
+        else System.out.println("Mayor: " + n3);
+    }
+}
+
+
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Lado 1: "); double l1 = sc.nextDouble();
+        System.out.print("Lado 2: "); double l2 = sc.nextDouble();
+        System.out.print("Lado 3: "); double l3 = sc.nextDouble();
+
+        if (l1 == l2 && l2 == l3) {
+            System.out.println("Es un triángulo Equilátero.");
+        } else if (l1 == l2 || l1 == l3 || l2 == l3) {
+            System.out.println("Es un triángulo Isósceles.");
+        } else {
+            System.out.println("Es un triángulo Escaleno.");
+        }
+    }
+}

@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+public class Tabla {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingresa un número: ");
+        int numero = sc.nextInt();
+
+        for(int i = 1; i <= 10; i++){
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Suma {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingresa un número: ");
+        int n = sc.nextInt();
+        int suma = 0;
+
+        for(int i = 1; i <= n; i++){
+            suma += i;
+        }
+
+        System.out.println("La suma es: " + suma);
+    }
+}
+
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingresa un número: ");
+        int n = sc.nextInt();
+
+        if(n < 0){
+            System.out.println("No existen factoriales negativos");
+        } else {
+            int factorial = 1;
+            
+            for(int i = 1; i <= n; i++){
+                factorial *= i;
+            }
+            
+            System.out.println("El factorial es: " + factorial);
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class SumaDigitos {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Escribe un número: ");
+        int numero = sc.nextInt();
+
+        int suma = 0;
+
+        for(; numero > 0; numero = numero / 10) {
+            int ultimoDigito = numero % 10;
+            suma = suma + ultimoDigito;
+        }
+
+        System.out.println("La suma de los dígitos es: " + suma);
+    }
+}
+
+
+import java.util.Scanner;
+
+public class NumeroPrimo {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Escribe un número: ");
+        int numero = sc.nextInt();
+
+        boolean esPrimo = true;
+
+        if(numero <= 1){
+            esPrimo = false;
+        } else {
+
+            for(int i = 2; i < numero; i++){
+                if(numero % i == 0){
+                    esPrimo = false;
+                    break;
+                }
+            }
+        }
+
+        if(esPrimo){
+            System.out.println("Es primo");
+        } else {
+            System.out.println("No es primo");
+        }
+    }
+}

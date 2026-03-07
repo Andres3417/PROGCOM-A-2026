@@ -1,0 +1,120 @@
+import java.util.Scanner;
+
+public class TablaMultiplicar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int numero = sc.nextInt();
+
+        int i = 1;
+
+        while(i <= 10){
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+            i++;
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class SumaNaturales {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int n = sc.nextInt();
+
+        int i = 1;
+        int suma = 0;
+
+        while(i <= n){
+            suma += i;
+            i++;
+        }
+
+        System.out.println("La suma es: " + suma);
+    }
+}
+
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int n = sc.nextInt();
+
+        if(n < 0){
+            System.out.println("No existen factoriales negativos");
+        } else {
+            int i = 1;
+            int factorial = 1;
+
+            while(i <= n){
+                factorial *= i;
+                i++;
+            }
+
+            System.out.println("El factorial es: " + factorial);
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Cuántos números de Fibonacci quieres: ");
+        int n = sc.nextInt();
+
+        int a = 0;
+        int b = 1;
+        int i = 1;
+
+        while(i <= n){
+            System.out.println(a);
+            int c = a + b;
+            a = b;
+            b = c;
+            i++;
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class AdivinarColor {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String[] colores = new String[10];
+
+        int i = 0;
+
+        while(i < 10){
+            System.out.print("Ingresa un color: ");
+            colores[i] = sc.nextLine();
+            i++;
+        }
+
+        System.out.print("Color secreto: ");
+        String secreto = sc.nextLine();
+
+        int intentos = 1;
+        boolean encontrado = false;
+
+        while(intentos <= 10 && !encontrado){
+            System.out.print("Adivina el color: ");
+            String intento = sc.nextLine();
+
+            if(intento.equals(secreto)){
+                System.out.println("Adivinaste!");
+                encontrado = true;
+            }else{
+                System.out.println("Incorrecto");
+            }
+
+            intentos++;
+        }
+    }
+}
